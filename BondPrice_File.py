@@ -2,10 +2,10 @@ import numpy as np
 
 def getBondPrice(y, face, couponRate, m, ppy=1):
     n = int(round(m * ppy))
-    periods = np.arange(1, n + 1)
+    time = np.arange(1, n + 1)
     r = y / ppy
     c = face * couponRate / ppy
-    df = (1.0 + r) ** (-periods)
+    df = (1.0 + r) ** (-time)
     return float(c * df.sum() + face * df[-1])
 
 

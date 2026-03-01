@@ -6,7 +6,7 @@ def getBondDuration(y, face, couponRate, m, ppy = 1):
     r=y/ppy
     c=face*couponRate/ppy
     cf=np.full(n,c)+face*(periods==n)
-    df=(1+r)**(-periods)
+    df=(1+r)**(-time)
     pvcf=cf*df
     price=pvcf.sum()
     t=time/ppy

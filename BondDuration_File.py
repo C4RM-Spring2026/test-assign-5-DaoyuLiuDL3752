@@ -10,7 +10,7 @@ def getBondDuration(y, face, couponRate, m, ppy = 1):
     pvcf=cf*df
     price=pvcf.sum()
     t=time/ppy
-    return float((t*pvcg).sum()/price)
+    return float((t*pvcf).sum()/price)
 
 y = 0.03
 face = 2000000
